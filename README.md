@@ -28,4 +28,5 @@ make: *** [obj/local/armeabi-v7a/libhello-jni.so] Error 1
 * This demo is based on [hello-jni](https://github.com/googlesamples/android-ndk/tree/android-mk/hello-jni).
 * luajit's binary is taken from [cocos2d-x's 3rd party binary repo](https://github.com/cocos2d/cocos2d-x-3rd-party-libs-bin/tree/v3/lua/luajit/prebuilt/android/armeabi-v7a). Build info can be found [here](https://github.com/cocos2d/cocos2d-x-3rd-party-libs-src/blob/v3/contrib/src/luajit/rules.mak), version is 2.0.1 as of Aug. 4th, 2016.
 * [A possibly related issue](https://code.google.com/p/android/issues/detail?id=73907) reported in 2014.
+* This demo cannot be built with NDK r10e either. But if we add `LIBCXX_USE_GABIXX := true` in Application.mk, then NDK r10e stops complaining about linker issue. However, this does not work with r12b.
 
